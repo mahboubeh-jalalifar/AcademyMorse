@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     "accounting",
     "register",
     "blog",
+    "rest_framework",
 ]
 
 MIDDLEWARE = [

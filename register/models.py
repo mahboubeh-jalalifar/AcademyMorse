@@ -18,9 +18,13 @@ class Register(models.Model):
         return f"{self.first_name} {self.last_name} {self.password}{self.age}{self.birthday}{self.email}{self.phonenumber}{self.adress}{self.created}{self.role}{self.gender} "
 
 class Register (models.Model):
-    ROLE_CHOICES=[("A","Admin"),
-                  ("U","User")]
+    ROLE_CHOICES=[
+        ("A","Admin"),
+        ("U","User")
+                  ]
 
-    GENDER_CHOICES= [("M","male"),
-                 ("F","Female"),
-                 ("O","Other")]
+    GENDER_CHOICES= [
+        ("M","male"),
+        ("F","Female"),
+        ("O","Other")
+                 ]
