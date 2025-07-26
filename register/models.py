@@ -1,6 +1,6 @@
 from time import timezone
 from django.db import models
-from django.forms import CharField, EmailField
+from django.forms import CharField,EmailField
 
 class Register(models.Model):
     first_name= models.CharField (max_length=50)

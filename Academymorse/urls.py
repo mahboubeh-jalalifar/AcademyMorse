@@ -22,5 +22,5 @@ urlpatterns = [
     path("accounting/", include("accounting.urls")),
     path("register/", include("register.urls")),
     path("blog/",include("blog.urls")),
-    path('api-auth/', include('rest_framework.urls'))
+    path("api-auth/", include("rest_framework.urls"))
 ]
