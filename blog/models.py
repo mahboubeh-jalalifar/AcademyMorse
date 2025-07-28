@@ -1,6 +1,7 @@
 from datetime import timezone
 from django.db import models
 from django.contrib.auth.models import User 
+
 class Blog(models.Model):
     post= models.CharField ()
     title= models.CharField (max_length=80)
