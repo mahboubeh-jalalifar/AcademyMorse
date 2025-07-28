@@ -1,7 +1,16 @@
-from django.core import serializers
+from rest_framework import serializers
 from .models import Accounting
 
-class Accountserializer (serializers.Modelserializer):
+class AccountingSerializer (serializers.Modelserializer):
     class meta:
         model=Accounting
-        Field="__all__"
+        Field=["user","email"]
+
+class AccountingSerializer (serializers.serializer):
+    user=serializers.CharField (max_weight=50)
+    email=serializers.EmailField()
+
+    def create(self,validated_data):
+        return Accounting.objects.create(**validated_data)
+    
+
