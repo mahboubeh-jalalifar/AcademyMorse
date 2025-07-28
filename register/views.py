@@ -24,6 +24,6 @@ class RegisterCreateView(APIView):
             return Response(serializer.data,status=status.HTTP_200_OK)
         return Response(serializer.data,status=status.HTTP_204_NO_CONTENT)
     
-class RegisterCreateView(generics.ListCreateAPIView):
+class RegisterSerializerView(generics.ListCreateAPIView):
     queryset=Register.objects.all()
     serializer_class=RegisterSerializer

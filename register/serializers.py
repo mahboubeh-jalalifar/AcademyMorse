@@ -20,4 +20,4 @@ class RegisterSerializer(serializers.serializer):
     role= serializers.CharField (max_length=10, default="User", choices="ROLE_CHOICES")
 
     def create (self,validated_data):
-        return Register.objects.create (**validated_data)
+        return Register.objects.create(**validated_data)
