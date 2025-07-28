@@ -21,7 +21,7 @@ class BlogCreateView(APIView):
         blog=Blog.objects.all()
         serializer=BlogSerializer(blog,many=True)
         return Response(serializer.data)
-    def post (self,request):
+    def post (self,request:Request):
         serializer=BlogSerializer(data=request.data)
         if serializer.is_valid():
             serializer.save()

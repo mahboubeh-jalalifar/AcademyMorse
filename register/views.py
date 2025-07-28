@@ -18,7 +18,7 @@ class RegisterCreateView(APIView):
         register=Register.objects.all()
         serializer=RegisterSerializer(register,many=True)
         return Response(serializer.data)
-    def post (self,request):
+    def post (self,request:Request):
         serializer=RegisterSerializer(data=request.data)
         if serializer.is_valid():
             serializer.save()

@@ -12,11 +12,11 @@ def say_hello(request):
     return HttpResponse ("Hello")
 
 class AccountingCreateView (APIView):
-    def get(self, request):
+    def get(self,request):
         accounting=Accounting.objects.all ()
         serializer=AccountingSerializer(accounting,many=True)
         return Response (serializer.data)
-    def post(self, request):
+    def post(self,request:Request):
         serializer=AccountingSerializer(data=request.data)
         if serializer.is_valid():
             serializer.save()
