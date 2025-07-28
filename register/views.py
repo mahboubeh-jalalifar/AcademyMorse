@@ -6,6 +6,7 @@ from rest_framework.views import APIView
 from rest_framework import generics
 from register.models import Register
 from .serializers import RegisterSerializer
+from rest_framework.request import Request
 
 def show_name (request):
     first_name="Mahboubeh"

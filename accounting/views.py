@@ -6,6 +6,7 @@ from rest_framework.views import APIView
 from rest_framework import generics
 from accounting.models import Accounting
 from .serializers import AccountingSerializer
+from rest_framework.request import Request
 
 def say_hello(request):
     return HttpResponse ("Hello")
