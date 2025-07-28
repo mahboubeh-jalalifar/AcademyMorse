@@ -1,12 +1,12 @@
 from rest_framework import serializers
 from .models import Accounting
 
-class AccountingSerializer (serializers.Modelserializer):
+class AccountingSerializer(serializers.ModelSerializer):
     class meta:
         model=Accounting
-        Field=["user","email"]
+        Fields=["user","email"]
 
-class AccountingSerializer (serializers.serializer):
+class AccountingSerializer(serializers.Serializer):
     user=serializers.CharField (max_weight=50)
     email=serializers.EmailField()
 
