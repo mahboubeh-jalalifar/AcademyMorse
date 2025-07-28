@@ -16,11 +16,11 @@ def Iran_time(request):
     return HttpResponse (f"Today is: {current_time}")
 
 class BlogCreateView(APIView):
-    def get (self, request):
+    def get (self,request):
         blog=Blog.objects.all()
         serializer=BlogSerializer(blog,many=True)
         return Response(serializer.data)
-    def post (self, request):
+    def post (self,request):
         serializer=BlogSerializer(data=request.data)
         if serializer.is_valid():
             serializer.save()

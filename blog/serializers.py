@@ -4,7 +4,7 @@ from .models import Blog
 class Blogserializer (serializers.ModelSerializer):
     class Meta:
         model=Blog
-        fields="__all__"
+        fields=["post","title","content","author","category","comment","created_at","updated_at","published_at","status"]
 
 class BlogSerializer(serializers.Serializer):
     post= serializers.CharField ()
